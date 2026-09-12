@@ -161,7 +161,9 @@ The XML parsing logic was updated to match the current API response schema.
 
 ---
 
-## ☁️ AWS Lambda Implementation
+## AWS Lambda Implementation
+
+![Lambda Function](screenshots/01-lambda-function.png)
 
 The data ingestion logic was deployed as an AWS Lambda function.
 
@@ -273,6 +275,8 @@ The RDS Security Group was configured to allow MySQL connections from the Lambda
 
 ## Monitoring and Troubleshooting
 
+![CloudWatch Logs](screenshots/03-cloudwatch-logs.png)
+
 Amazon CloudWatch was used to monitor Lambda executions and investigate runtime issues.
 
 ### Issue 1 — Lambda Timeout
@@ -362,6 +366,10 @@ After updating the RDS access configuration, the Lambda function successfully co
 
 ## Final Result
 
+![Lambda Test Success](screenshots/02-lambda-test-success.png)
+
+![DataGrip Result](screenshots/05-datagrip-result.png)
+
 The final pipeline successfully completed the end-to-end data flow:
 
 ```text
@@ -398,9 +406,7 @@ real-estate-data-pipeline-aws/
 │   ├── 01-lambda-function.png
 │   ├── 02-lambda-test-success.png
 │   ├── 03-cloudwatch-logs.png
-│   ├── 04-rds-connectivity.png
 │   ├── 05-datagrip-result.png
-│   └── 06-architecture.png
 │
 └── .gitignore
 ```
